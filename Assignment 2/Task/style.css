@@ -30,7 +30,6 @@ body {
   transform: scale(min(calc(100vw / 1140), calc(100vh / 980)));
 }
 
-/* ─────────────── HEADER ─────────────── */
 .header {
   display: flex;
   align-items: flex-start;
@@ -124,24 +123,20 @@ body {
 }
 .fi { width: 17px; height: 17px; color: #8fa3b8; }
 
-/* ─────────────── GRID WRAP ─────────────── */
 .grid-wrap { padding: 9px; display: flex; flex-direction: column; gap: 9px; }
 
-/* ROW 1: hero wide + 3 equal cards */
 .row1 {
   display: grid;
   grid-template-columns: 440px repeat(3, 1fr);
   gap: 9px;
 }
 
-/* ROW 2: 5 equal cards */
 .row2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 9px;
 }
 
-/* ─────────────── HERO CARD ─────────────── */
 .hero-card {
   position: relative;
   background: linear-gradient(150deg, #1c2f46 0%, #111e2d 55%, #0c1520 100%);
@@ -182,7 +177,6 @@ arent 60%);
   pointer-events: none;
 }
 
-/* Hero model figure — layered gradients to simulate white puffer silhouette */
 .hero-model-figure {
   position: absolute;
   left: 0; top: 0;
@@ -271,7 +265,6 @@ ent 70%);
   color: #fff;
 }
 
-/* ─────────────── PRODUCT CARDS ─────────────── */
 .pcard {
   background: #111820;
   border: 1px solid #1b2736;
@@ -284,7 +277,6 @@ ent 70%);
 }
 .pcard:hover { border-color: #243040; background: #16202c; }
 
-/* image area */
 .pimg {
   position: relative;
   width: 100%;
@@ -312,7 +304,6 @@ ent 70%);
   z-index: 1;
 }
 
-/* Background colours per product */
 .bg-silver1  { background: linear-gradient(168deg, #c6d8ea 0%, #9ab4ca 45%, #7898b0 100%); }
 .bg-silver2  { background: linear-gradient(168deg, #b8ccd8 0%, #8aa4bc 45%, #6688a4 100%); }
 .bg-dark1    { background: linear-gradient(168deg, #283848 0%, #1a2a3a 45%, #101c28 100%); }
@@ -322,7 +313,6 @@ ent 70%);
 .bg-steelblue{ background: linear-gradient(168deg, #386090 0%, #284878 45%, #183060 100%); }
 .bg-mist     { background: linear-gradient(168deg, #c5cdd8 0%, #a4b2c0 45%, #8898a8 100%); }
 
-/* Figure silhouettes — gradient-painted model shapes */
 .fig {
   position: absolute;
   bottom: 0;
@@ -333,7 +323,6 @@ ent 70%);
   pointer-events: none;
 }
 
-/* White / reflective model */
 .fwhite {
   background:
     radial-gradient(ellipse 44% 22% at 50% 16%, rgba(255,255,255,.88) 0%, rgba(225,240,255,.45) 50%, transparent 78%),
@@ -398,7 +387,6 @@ ent 70%);
 40,158,178,.22) 55%, transparent 75%);
 }
 
-/* ─────────────── PRODUCT INFO ─────────────── */
 .pinfo {
   padding: 8px 10px 10px;
   display: flex;
@@ -464,7 +452,6 @@ ent 70%);
   margin-top: 3px;
 }
 
-/* ─────────────── FEATURE STRIP ─────────────── */
 .feat-strip {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -505,7 +492,6 @@ ent 70%);
   color: var(--txt-m);
 }
 
-/* ─────────────── FOOTER ─────────────── */
 .footer {
   display: flex;
   align-items: center;
@@ -561,7 +547,6 @@ ent 70%);
 .sico:hover { color: var(--txt); }
 .sico svg { width: 18px; height: 18px; }
 
-/* ─────────────── SCROLLBAR ─────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-l); border-radius: 3px; }
