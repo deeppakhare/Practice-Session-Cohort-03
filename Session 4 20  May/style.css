@@ -1,297 +1,346 @@
 @font-face {
-    font-family: Reckless;
-    src: url(./fonts//RecklessCondensedS-TRIAL-Book.woff);
+  font-family: Reckless;
+  src: url(./assets/font/RecklessCondensedS-TRIAL-Book.woff);
 }
 
 @font-face {
-    font-family: Figtree;
-    src: url(./fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
+  font-family: Figtree;
+  src: url(./assets/font/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
 }
 
 @font-face {
-    font-family:  Midnight;
-    src: url(./fonts//midnight-sans-rd-12-medium-trial.otf);
+  font-family: Midnight;
+  src: url(./assets/font/midnight-sans-rd-12-medium-trial.otf);
 }
-*{
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/font/RobotoMono-Regular.ttf);
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-main{
-    width: 100%;
-    min-height: 100vh;/* min height is used for giving minimum height to element*/
-    background-color: #FBF9EB;
-   
- 
-
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fffefb;
+  position: relative;
 }
 
-nav{
-   width: 100%;
- background-color: #FFFEFB;
- display: flex;
- align-items: center;
- justify-content: space-between;
- font-family: Reckless;
-  padding: 0.8rem 1rem;
-   font-size: 0.8rem;
-   position: sticky;
-
+header {
+  height: 10vh;
+  width: 100%;
+  padding: 1rem 1rem;
 }
-nav i{
+nav {
+  height: 7vh;
+  width: auto;
+  background-color: #fffefb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Reckless;
+  padding: 1rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  border: 1px solid black;
+  position: absolute;
+  top: 1.5%;
+  left: 1.5%;
+  right: 1.5%;
+}
+nav i {
+  display: none;
+}
+nav .nav-part-1 {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+.nav-part-1 h3 {
+  position: relative;
+  font-weight: 300;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+.underline h3::before{
+  content: "";
+  height: 1px;
+  width: 1%;
+  background-color: black;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: all ease 0.3s;
+}
+
+.underline h3:hover::before{
+  width: 100%;
+}
+
+nav .nav-part-2 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-part-3 {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-part-3 h3 {
+  font-weight: 300;
+  font-family: Roboto;
+  font-size: clamp(0.1rem, 4vw, 0.8rem);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-part-3 svg {
+  width: 30px;
+  height: 30px;
+}
+#section-1 {
+  width: 100%;
+  height: 95vh;
+  background-image: url(./assets/Images/landingpage.webp);
+  background-size: cover;
+
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  padding: 3rem 0.5rem;
+  gap: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+#section-1 h1 {
+  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-family: Reckless;
+  color: white;
+  font-weight: 500;
+  display: flex;
+      margin-left: 1%;
+  width: 29%;
+}
+
+#section-1 p {
+  font-size: clamp(1.2rem, 1vw, 1rem);
+  font-family: Figtree;
+  font-weight: 400;
+  color: white;
+  display: flex;
+      margin-left: 1%;
+  width: 29%;
+}
+
+#section-1 button {
+  padding: 1.2rem;
+  border: none;
+  background-color: #2a2857;
+  color: white;
+  font-family: Figtree;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  margin-left: 1%;
+}
+
+@media (max-width: 768px) {
+  nav i {
     font-size: 2rem;
-    width: 33%;
-}
-nav .nav-part-1{
-    display: flex;
-    gap: 1rem;
-    width: 33%;
+    display: inline;
+  }
+  .nav-part-1 h3 {
     display: none;
-   
-}
-.nav-part-1 h3{
-font-weight: 300;
-}
-
-nav .nav-part-2{
-    width: 20%;
-    height: auto;
-    display: flex;
-    
-}
-
-.nav-part-2 img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.nav-part-3{
-    display: flex;
-    width: 30%;
-   gap: 2rem;
-   align-items: center;
-    justify-content: end;
-    
-}
-
-.nav-part-3 h3{
-font-weight: 300;
-display: none;
-}
-
-.nav-part-3 svg{
-   width: 30px;
-   height: 30px;
-
-}
-
-#section-1{
-    width: 100%;
-    height: 85vh;
-    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=720);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: end;
+  }
+  .nav-part-2 {
+    margin-right: 10%;
+  }
+  .nav-part-3 h3 {
+    display: none;
+  }
+  #section-1 {
+    max-height: 85vh;
     flex-direction: column;
     padding: 3rem 0.5rem;
     gap: 1rem;
     text-align: center;
     border-bottom: 1px solid #000;
-}
-
-#section-1 h1{
-    font-size: clamp(3.5rem,5vw,5rem);
-font-family: Reckless;
-color: white;
-font-weight: 500;
-
-}
-
-#section-1 p{
-    font-size: clamp(1.2rem,1vw,1rem);
-    font-family: Figtree;
-    font-weight: 400;       
-    color: white;
-}
-
-#section-1 button{
-   
-    padding: 1.2rem;
-    border: none;
-    background-color: #2A2857;
-    color: white;
-    font-family: Figtree;
-    border-radius: 1.2rem;
-    font-size: 1.1rem;
-}
-
-#section-2{
-    width: 100%;
-    height: 100vh;
-    padding: 8rem 1rem;
+  }
+  #section-1 h1 {
+    min-width: 100%;
+  }
+  #section-1 p {
+    min-width: 100%;
     
+  }
+  #section-1 button {
+    min-width: 100%;
+  }
 }
 
-#section-2 .section2-text{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Reckless;
-       text-align: center;
-}
-
-.section2-text h1{
-     font-size: clamp(2.2rem,8vw,6rem);
-     font-weight: 300;
-     width: 80%;
-  
-}
-
-
-#section-2 .btn-1{
-    padding: 0.1rem 0.5rem;
-    font-size: 3rem;
-    font-family: Midnight;
-    font-weight: 600;
-    background-color: #DAAEEA;
-    border-radius: 1.2rem;
-    text-transform: uppercase;
-    margin-top: 5rem;
-    rotate: -5deg;
-    letter-spacing: 2px;
-}
-
-#section-2 .card-container{
-    width: 100%;
-    padding: 2rem 0;
-    display: flex;
-    overflow-x: auto;
+#section-2 {
+  width: 100%;
+  height: 100vh;
+  padding: 8rem 1rem;
 
 }
-.card-container::-webkit-scrollbar{
+
+#section-2 .section2-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Reckless;
+  text-align: center;
+}
+
+.section2-text h1 {
+  font-size: clamp(2.2rem, 8vw, 6rem);
+  font-weight: 300;
+  width: 80%;
+}
+
+#section-2 .btn-1 {
+  padding: 0.1rem 0.5rem;
+  font-size: 3rem;
+  font-family: Midnight;
+  font-weight: 600;
+  background-color: #daaeea;
+  border-radius: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  rotate: -5deg;
+  letter-spacing: 2px;
+}
+
+#section-2 .card-container {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  overflow-x: auto;
+}
+.card-container::-webkit-scrollbar {
   display: none;
 }
-.card{
-    display:flex ;
-    flex-direction: column;
-    gap: 1rem;
-    flex-shrink: 0;
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
 }
-.card-top{
-    width: 90%;
-    height: 35vh;
-    background-color: #C1EE91;
-    position: relative;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
-    border-radius: 1rem;
-    border: 1px solid #000;
-    overflow: hidden;
+.card-top {
+  width: 90%;
+  height: 35vh;
+  background-color: #c1ee91;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  overflow: hidden;
 }
 
-.card-top-text{
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    
+.card-top-text {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
 }
-.card-top-text button{
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.2rem;
-    border: 1px solid #000;
-   background-color: #fff;
-   font-family: Midnight;
-   font-size: 1.2rem;
-   text-transform: uppercase;
-   display: block;
-   
-   font-weight: 400;
+.card-top-text button {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-family: Midnight;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: block;
+
+  font-weight: 400;
 }
-.card-top-text span{
-    font-size: 1.2rem;
-    font-family: Reckless;
+.card-top-text span {
+  font-size: 1.2rem;
+  font-family: Reckless;
 }
-.card-top img{
-    height: 90%;
-    width: 90%;
-    object-fit: cover;
-    object-position: center;
+.card-top img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  object-position: center;
   position: absolute;
   transition: all ease 0.3s;
 }
 
-
-.card-btm-text{
-    background-color: #fff;
-    padding: 0.6rem 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.3rem;
-    font-family: Reckless;
-    font-size: 1.2rem;
+.card-btm-text {
+  background-color: #fff;
+  padding: 0.6rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  font-family: Reckless;
+  font-size: 1.2rem;
 }
 
-.card-top:hover img{
-    scale: 1.1;
+.card-top:hover img {
+  scale: 1.1;
 }
 
-.card-btm{
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-     font-family: Reckless;
-     align-items: start;
+.card-btm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: Reckless;
+  align-items: start;
 }
 
-.card-btm h1{
- font-family: 0.3rem;
- font-weight: 100;
+.card-btm h1 {
+  font-family: 0.3rem;
+  font-weight: 100;
 }
 
-.card-btm h3{
- font-family: 0.3rem;
- font-weight: 100;
+.card-btm h3 {
+  font-family: 0.3rem;
+  font-weight: 100;
 }
-.card-btm p{
- font-weight: 100;
-opacity: 0.5;
-width: 90%;
-}
-
-.btn-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.btm-btn{
-    
-   padding: 1.2rem;
-    border: none;
-    background-color: #2A2857;
-    color: white;
-    font-family: Figtree;
-    border-radius: 1.2rem;
-    font-size: 1.1rem;
-    
-}
-@media (min-width:768px) {
-    
+.card-btm p {
+  font-weight: 100;
+  opacity: 0.5;
+  width: 90%;
 }
 
-@media (min-width:1024px) {
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btm-btn {
+  padding: 1.2rem;
+  border: none;
+  background-color: #2a2857;
+  color: white;
+  font-family: Figtree;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* @media (min-width:1024px) {
 
     nav{
    width: 100%;
@@ -374,4 +423,4 @@ white-space: nowrap;
 .card-container{
     margin-top: 8rem;
 }
-}
+} */
