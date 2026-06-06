@@ -75,17 +75,18 @@
 
 // Find Adult Users 
 
-let users = [
-    {name: 'Ritik', age:20},
-    {name: 'Aman', age:16},
-    {name: 'Priya', age:25}
-]
+// let users = [
+//     {name: 'Ritik', age:20},
+//     {name: 'Aman', age:16},
+//     {name: 'Priya', age:25}
+// ]
 
-function getAdults(users){
-    return users.filter((users) => {
-        if(users.age>=18) return user
-    })
-}
-console.log(getAdults(users))
+// function getAdults(users){
+//     return users.filter((users) => {
+//         if(users.age>=18) return user
+//     })
+// }
+// console.log(getAdults(users))
 
 
+// Shopping Cart total 
